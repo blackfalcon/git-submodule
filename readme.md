@@ -30,3 +30,14 @@ In this example repo, I created a project that is including the libsass library 
 
 In this example you will see a new directory, `libsass/`. The entire project has been cloned into your local repo for the same of development and it has it's whole git history with it. 
 
+Looking at the example project, what you will see when you push this to Github is that the reference library is NOT in your repo. There is simply a reference to that repo. 
+
+Looking at the [commit history](https://github.com/blackfalcon/git-submodule/commit/6b604b7413eccf24af203007b0cdd8889363d098) for this repo, you will see a new dot file called `.gitmodules` added. This is a configuration to the library I included. 
+
+The next thing to notice is the libsass directory is simply a reference to the the commit on the library's repo. 
+
+### Update your project
+
+Then when you are ready to update your submodule, it's really easy
+
+`$ git submodule foreach git pull origin master`
